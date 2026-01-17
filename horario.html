@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>horario</title>
+        <style>
+            h1 {text-align: center; color: black; font-family: fantasy;}
+            table {text-align: center; margin: auto; border-collapse: collapse; border: 100px color: black; width: 90%;} 
+            td {padding: 15px; height: 60px; border: 1.5px solid black; transition: all 0.3s ease; text-align: center !important; vertical-align: middle;}
+            #Quimica {background-color: rgb(255, 102, 0);}
+            #Fisica {background-color: blue;}
+            #Ingles {background-color: rgb(21, 118, 118);}
+            #OrientacionyConvivencia {background-color: fuchsia;}
+            #CienciasdelaTierra {background-color:  green;}
+            #Castellano {background-color: rgb(241, 142, 142);}
+            #Receso {background-color: rgb(105, 105, 105);}
+            #Matematicas {background-color: darkred;}
+            #Soberania {background-color: lightsalmon;}
+            #EducacionFisica {background-color: yellow;}
+            #Biologia {background-color: mediumseagreen;}
+            #Geografia {background-color: rgb(103, 55, 8);}
+            #Metodologia {background-color: lightskyblue;}
+            #----- {background-color: whitesmoke;}
+            td:hover {background-color: #f8f9fa !important; color: black !important;}
+            td[id] {cursor: pointer;}
+        </style>
+    </head>
+    <body>
+        <h1>Horario</h1>
+        <table border="5"> 
+            <tr>
+                <td>Hora</td>
+                    <td>Lunes</td>
+                    <td>Martes</td>
+                     <td >Miercoles</td>
+                     <td>Jueves</td>
+                    <td>Viernes</td>
+            </tr>
+
+            <tr>
+                <td>6:50-7:40</td>
+                <td rowspan="2" id="Fisica" style="width: 50px;">Fisica</td>
+                <td rowspan="2" id="Quimica">Quimica</td>
+                <td id="OrientacionyConvivencia">Orientacion y Convivencia</td>
+                 <td rowspan="2" id="Ingles">Ingles</td>
+                 <td rowspan="2" id="CienciasdelaTierra">Ciencias de la Tierra</td>
+            <tr>
+                <td>7:40-8:20</td>
+                <td id="Castellano">Castellano</td>
+            </tr>
+            </tr>
+
+            <TR>
+                <td >8:20-8:20</td>
+                <td colspan="5" id="Receso">Receso</td>
+            </TR>
+
+            <tr>
+                
+                <td rowspan="2">8:20-9:50</td>
+                <td rowspan="2" id="Geografia">Geografia</td>
+                <td rowspan="2" id="Biologia">Biologia</td>
+                <td rowspan="2" id="Matematicas">Matematica</td>
+                <td rowspan="2" id="Quimica">Quimica</td>
+                <td rowspan="2" id="EducacionFisica">Educacion Fisica</td>
+            </tr>
+            <tr></tr>
+
+            <tr>
+                <td >9:50-9:55</td>
+                <td colspan="5" id="Receso">Receso</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">9:55-11:15</td>
+                <td rowspan="2" id="Castellano">Castellano</td>
+                <td rowspan="2" id="Ingles">Ingles</td>
+                <td rowspan="2" id="Fisica">Fisica</td>
+                <td rowspan="2" id="Matematicas">Matematicas</td>
+                <td  rowspan="2" id="Soberania">Soberania</td>
+            </tr>
+            <tr></tr>
+
+            <tr>
+                <td>11:15-11:20</td>
+                <td colspan="5" id="Receso">Receso</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">11:20-12:05</td>
+                <td rowspan="2" id="Metodologia">Metodologia</td>
+                <td rowspan="2"id="-----">-----</td>
+                <td rowspan="2" id="-----"">-----</td>
+                <td rowspan="2" id="-----">-----</td>
+                <td rowspan="2" id="-----">-----</td>
+            </tr>
+            <tr></tr>
+
+        </table>
+        <script>
+
+            const celdas =document.querySelectorAll('td[id]')
+            celdas.forEach(m => {
+                m.onclick = function(){
+                    window.location.href =this.id.toLowerCase() + ".html";
+                };
+            })
+            
+
+        </script>
+    
+</html>
