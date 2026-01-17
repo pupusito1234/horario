@@ -100,7 +100,7 @@
             const celdas =document.querySelectorAll('td[id]')
             celdas.forEach(m => {
                 m.onclick = function(){
-                    window.location.href =this.id.toLowerCase() + ".html";
+                    window.open(this.id.toLowerCase() + ".html", "_blank");
                 };
             })
             
